@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 14px;
+    color: white;
+}
+
+main {
+    margin: 0 auto;
+}
+
+div.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/weather-app-background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+div.location {
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom:3rem;
+}
+
+div.location input {
+    display: block;
+    font-family: sans-serif;
+    text-align: center;
+    width: 80%;
+    font-size: 1.5rem;
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+    max-width: 400px;
+    color: black;
+    margin: 0 auto;
+    border: none;
+    opacity: 0.5;
+}
+
+div.location button {
+    font-family: sans-serif;
+    width: 6rem;
+    padding: 0.7rem 1rem;
+    background-color: #1affa3;
+    font-size: 1rem;
+    color: #fff;
+    border: none;
+    margin: 1rem auto;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+div.location p {
+    margin-top: 2rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+div.location p span {
+    display: block;
+}
+
+div.location p span:first-child {
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+div.degree {
+    margin-bottom: 3rem;
+}
+
+div.degree > p {
+    margin-bottom: 1rem;
+    font-size: 10rem;
+    text-align: center;
+}
+
+div.degree > p:first-child {
+    font-size: 6rem;
+}
+
+div.degree div.level {
+    margin: 0 auto;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+  
+div.degree div.level img {
+    width: 5rem;
+    position: relative;
+    top: 13px;
+    display: inline-block;
+}
+  
+div.degree div.level p {
+    font-size: 3rem;
+    display: inline-block;
+}
+  
+section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem 2rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+  
+div.hourly {
+    width: 40%;
+    position: relative;
+}
+  
+div.hourly div {
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+  
+div.hourly div img {
+    width: 3rem;
+}
+  
+div.by-hourly div p {
+    font-size: 1.6rem;
+}
+  
+div.by-hourly div p span {
+    display: block;
+}
+  
+div.daily {
+    width: 55%;
+    position: relative;
+}
+  
+div.daily::after {
+    content: "";
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #efefef;
+}
+  
+div.daily div {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+  
+div.daily div p {
+    font-size: 1.6rem;
+}
+  
+div.daily div p:first-child {
+    width: 100%;
+}
+  
+div.daily div img {
+    width: 3rem;
+}
+
+/* Making the page more responsive */
+@media screen and (min-width: 1000px) {
+    div.inner-wrapper {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 2rem;
+      padding-top: 5rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  
+    div.inner-wrapper main div.location input {
+      font-size: 2rem;
+    }
+  
+    div.inner-wrapper main div.location button {
+      font-size: 1.5rem;
+      width: 10rem;
+    }
+  
+    div.inner-wrapper main div.location p {
+      font-size: 3rem;
+    }
+  
+    div.inner-wrapper main div.location p span {
+      display: block;
+    }
+  
+    div.inner-wrapper main div.location p span:first-child {
+      font-size: 8rem;
+    }
+  
+    div.inner-wrapper main div.level p {
+      font-size: 3rem;
+    }
+  
+    div.inner-wrapper section {
+      width: 45%;
+    }
+  
+    div.inner-wrapper section div.by-hourly div p {
+      font-size: 2rem;
+    }
+  
+    div.inner-wrapper section div.by-daily div p {
+      font-size: 2rem;
+    }
+}
